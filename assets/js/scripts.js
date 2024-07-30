@@ -87,25 +87,7 @@ window.onload = () => {
   spanPlayer.innerHTML = playerName;
   startTimer();
 
-  if (gameMode === 'child') {
-    // Configurações específicas para o modo Criança
-  } else if (gameMode === 'student') {
-    // Configurações específicas para o modo Estudante
-  } else if (gameMode === 'clt') {
-    // Configurações específicas para o modo CLT
-  } else if (gameMode === 'programmer') {
-    // Configurações específicas para o modo Programador
-  }
-
-  if (gameLevel === 'easy') {
-    // Configurações específicas para o nível Fácil
-  } else if (gameLevel === 'medium') {
-    // Configurações específicas para o nível Médio
-  } else if (gameLevel === 'hard') {
-    // Configurações específicas para o nível Difícil
-  }
+  // Adicione lógica específica para cada modo e nível, se necessário
 
   shuffle();
 }
-
-
