@@ -3,11 +3,13 @@ const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const congratsMessage = document.querySelector('.congrats-message');
 const playerNameElement = document.querySelector('.player-name');
+const playerTimerPointsElement = document.querySelector('.player-timer');
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let matchCount = 0;  // Contador de pares combinados
+/* let pointsCount = 0; */
 
 function flipCard() {
   if (lockBoard) return;
@@ -74,6 +76,8 @@ const startTimer = () => {
 }
 
 const endGame = () => {
+  playerTimerPointsElement.textContent = timer.innerHTML 
+  console.log(playerTimerPointsElement.textContent);
   clearInterval(this.loop);  // Para o timer
   congratsMessage.style.display = 'block';
   playerNameElement.textContent = localStorage.getItem('player');
