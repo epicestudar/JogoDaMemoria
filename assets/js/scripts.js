@@ -76,15 +76,28 @@ const startTimer = () => {
 }
 
 const endGame = () => {
-  playerTimerPointsElement.textContent = timer.innerHTML 
+  playerTimerPointsElement.textContent = timer.innerHTML;
+  let teste = playerTimerPointsElement.textContent
   console.log(playerTimerPointsElement.textContent);
   clearInterval(this.loop);  // Para o timer
   congratsMessage.style.display = 'block';
   playerNameElement.textContent = localStorage.getItem('player');
+
 }
+
+
+function ranking(position) {
+  localStorage.setItem(posicoes,position);
+  let test = localStorage.getItem(posicoes);
+  console.log(test) 
+  
+}
+
 
 window.onload = () => {
   spanPlayer.innerHTML = localStorage.getItem('player');
   startTimer();
   shuffle();
 }
+
+
