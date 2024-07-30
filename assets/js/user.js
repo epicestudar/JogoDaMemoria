@@ -4,21 +4,22 @@ const btnUser = document.querySelector('.btn-game');
 const formUser = document.querySelector('.login-form');
 
 /* Input validation function */
-const validateInput = ({ target }) => { // target = event destructuring
+const validateInput = ({ target }) => {
     if(target.value.length > 0) {
-        btnUser.removeAttribute('disabled'); // if the input has 1 character or more it will enable the play button
+        btnUser.removeAttribute('disabled');
     } else {
-        btnUser.setAttribute('disabled', ''); // If it removes all characters, the button will be disabled again
+        btnUser.setAttribute('disabled', '');
     }
 }
 
 const handleSubmit = (event) => {
-    event.preventDefault(); // Disables the website from automatically loading after the user clicks the button
+    event.preventDefault();  // Desativa o carregamento automático da página ao clicar no botão
 
-    localStorage.setItem('player', inputUser.value); // will store the user name in brownser's memory with the player parameter
-    window.location = '/assets/pages/game.html'; // will redirect the user to the game page
+    localStorage.setItem('player', inputUser.value);  // Armazena o nome do usuário na memória do navegador com o parâmetro player
+    window.location = '/assets/pages/modes.html';  // Redireciona para a página de seleção de modo
 }
 
 /* When accessing the input action... */
 inputUser.addEventListener('input', validateInput);
 formUser.addEventListener('submit', handleSubmit);
+
