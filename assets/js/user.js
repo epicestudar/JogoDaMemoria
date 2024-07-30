@@ -16,7 +16,7 @@ const handleSubmit = (event) => {
     event.preventDefault(); // Disables the website from automatically loading after the user clicks the button
 
     localStorage.setItem('player', inputUser.value); // will store the user name in brownser's memory with the player parameter
-    window.location = 'game.html'; // will redirect the user to the game page
+    window.location = '/assets/pages/game.html'; // will redirect the user to the game page
 }
 
 /* When accessing the input action... */
