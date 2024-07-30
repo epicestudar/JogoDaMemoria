@@ -77,11 +77,13 @@ const startTimer = () => {
 
 const endGame = () => {
   playerTimerPointsElement.textContent = timer.innerHTML;
+  playerNameElement.textContent = /* localStorage.getItem('player'); */
+  playerNameElement.textContent = "Heitor"
+
   ranking(playerNameElement.textContent, playerTimerPointsElement.textContent);
-  console.log(playerTimerPointsElement.textContent);
+  console.log(playerTimerPointsElement.textContent, playerNameElement.textContent);
   clearInterval(this.loop);  // Para o timer
   congratsMessage.style.display = 'block';
-  playerNameElement.textContent = localStorage.getItem('player');
 }
 
 //Utilização do JSON para armazenar os dados de pontuação
