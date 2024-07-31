@@ -44,5 +44,5 @@
    #### - O usuário se cansar rápido do jogo;
    #### - A interface não estar atrativa e agradável aos olhos do usuário
 
-   
+  
 </p> <br><br><br>

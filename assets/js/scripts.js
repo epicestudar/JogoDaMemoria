@@ -80,7 +80,14 @@ const endGame = () => {
 }
 
 window.onload = () => {
-  spanPlayer.innerHTML = localStorage.getItem('player');
+  const playerName = localStorage.getItem('player');
+  const gameMode = localStorage.getItem('mode');
+  const gameLevel = localStorage.getItem('level');
+
+  spanPlayer.innerHTML = playerName;
   startTimer();
+
+  // Adicione lógica específica para cada modo e nível, se necessário
+
   shuffle();
 }
